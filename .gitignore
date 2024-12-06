@@ -2,9 +2,7 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs/AdventOfCode/v17
-/.vs/AdventOfCode/FileContentIndex
-/.vs
 obj
 bin
-/2024/.vs/AOC2024/DesignTimeBuild/.dtbcache.v2
+.vs
+
