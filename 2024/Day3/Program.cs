@@ -1,7 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-var fileloc = @"C:\Users\myper\OneDrive\AOC2024\AdventCodingDay1\aocd3.txt";
-var input = File.ReadAllText(fileloc);
+var input = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory() + $"..\\..\\..\\..\\..\\Inputs\\aocd3.txt"));
 Regex regMul = new Regex(@"mul\((?<Number1>\d{1,3})\,(?<Number2>\d{1,3})\)");
 var matches = regMul.Matches(input);
 long result = 0;

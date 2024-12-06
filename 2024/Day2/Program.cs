@@ -1,6 +1,4 @@
-﻿
-var fileloc = @"C:\Users\myper\OneDrive\AOC2024\AdventCodingDay1\aocd2.txt";
-var lines = File.ReadLines(fileloc).ToList();
+﻿var lines = File.ReadLines(Path.Combine(Directory.GetCurrentDirectory() + $"..\\..\\..\\..\\..\\Inputs\\aocd2.txt")).ToList();
 List<List<int>> list = new List<List<int>>();
 var count = lines.Count;
 for (int j = 0; j < count; j++)
