@@ -24,3 +24,4 @@ foreach (Match a in matches)
     if (isFirst) isFirst = false;
 }
 Console.WriteLine($"Szumma 3B:{result}");
+Console.ReadKey();

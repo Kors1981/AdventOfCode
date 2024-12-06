@@ -122,3 +122,4 @@ foreach (var item in list)
     }
 }
 Console.WriteLine($"Szumma 2B:{sum}");
+Console.ReadKey();
