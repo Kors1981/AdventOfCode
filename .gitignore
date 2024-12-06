@@ -5,4 +5,5 @@
 obj
 bin
 .vs
-
+.suo
+/2024/.vs/AOC2024/v17/.suo
