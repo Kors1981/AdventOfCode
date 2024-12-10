@@ -33,6 +33,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Inputs", "Inputs", "{D245A4
 		Inputs\aocd9test.txt = Inputs\aocd9test.txt
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day11", "Day11\Day11.csproj", "{CE18AC55-DE84-4D60-B9C8-BC0F1A7324E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,10 @@ Global
 		{5CA95AD3-0499-482C-815E-C51F4FEC7FD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CA95AD3-0499-482C-815E-C51F4FEC7FD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CA95AD3-0499-482C-815E-C51F4FEC7FD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE18AC55-DE84-4D60-B9C8-BC0F1A7324E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE18AC55-DE84-4D60-B9C8-BC0F1A7324E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE18AC55-DE84-4D60-B9C8-BC0F1A7324E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE18AC55-DE84-4D60-B9C8-BC0F1A7324E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
