@@ -5,7 +5,7 @@ for (int j = 0; j < count; j++)
 {
     var res = lines[j].Split(' ', StringSplitOptions.RemoveEmptyEntries);
     var listitem = new List<int>();
-    for (int i = 0; i < res.Count(); i++)
+    for (int i = 0; i < res.Length; i++)
     {
         listitem.Add(int.Parse(res[i]));
     }
@@ -17,7 +17,7 @@ bool IsAsc = false;
 bool isValid = false;
 foreach (var item in list)
 {
-    for (int i = 0; i < item.Count(); i++)
+    for (int i = 0; i < item.Count; i++)
     {
         if (i == 0)
         {
@@ -47,7 +47,7 @@ foreach (var item in list)
             }
             else break;
             //last item
-            if (i + 1 == item.Count())
+            if (i + 1 == item.Count)
             {
                 sum++;
             }
@@ -60,7 +60,7 @@ sum = 0;
 foreach (var item in list)
 {
     FoundOneOk = false;
-    for (int k = 0; k <= item.Count(); k++)
+    for (int k = 0; k <= item.Count; k++)
     {
         if (FoundOneOk)
         {
@@ -68,7 +68,7 @@ foreach (var item in list)
         }
         var temp = new List<int>();
 
-        for (int g = 0; g < item.Count(); g++)
+        for (int g = 0; g < item.Count; g++)
         {
             if (k == item.Count)
             {
@@ -81,7 +81,7 @@ foreach (var item in list)
         }
         isValid = false;
 
-        for (int i = 0; i < temp.Count(); i++)
+        for (int i = 0; i < temp.Count; i++)
         {
             if (i == 0)
             {
@@ -111,7 +111,7 @@ foreach (var item in list)
                 }
                 else break;
                 //last temp
-                if (i + 1 == temp.Count())
+                if (i + 1 == temp.Count)
                 {
                     FoundOneOk = true;
                 }
