@@ -20,6 +20,7 @@ for (int j = 0; j < count; j++)
     list.Add(listitem);
 }
 long sum = 0;
+long sum2 = 0;
 for (int i = 0; i < count; i++)
 {
     for (int j = 0; j < list[0].Count; j++)
@@ -27,23 +28,12 @@ for (int i = 0; i < count; i++)
         if (list[i][j] == 0)
         {
             sum += GetGoodPoints(list, new List<List<(int, int)>> { new List<(int, int)> { (i, j) } }, 1).Last().Distinct().Count();
+            sum2 += GetGoodPoints(list, new List<List<(int, int)>> { new List<(int, int)> { (i, j) } }, 1).Last().Count;
         }
     }
 }
 Console.WriteLine($"10A:{sum}");
-sum = 0;
-
-for (int i = 0; i < count; i++)
-{
-    for (int j = 0; j < list[0].Count; j++)
-    {
-        if (list[i][j] == 0)
-        {
-            sum+= GetGoodPoints(list, new List<List<(int, int)>> { new List<(int, int)> { (i, j) } }, 1).Last().Count;
-        }
-    }
-}
-Console.WriteLine($"10B:{sum}");
+Console.WriteLine($"10B:{sum2}");
 Console.ReadKey();
 
 List<List<(int, int)>> GetGoodPoints(List<List<byte>> matrix, List<List<(int,int)>> positions, byte expectedValue)
