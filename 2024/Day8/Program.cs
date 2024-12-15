@@ -62,7 +62,6 @@ FinalPositions = new();
 foreach (var pairs in positionPairs)
 {
     (int, int) distance = (pairs.Item3 - pairs.Item1, pairs.Item4 - pairs.Item2);
-    var exit = false;
     for (int i = 0; pairs.Item1 - distance.Item1 * i >= 0 && pairs.Item2 - distance.Item2 * i>=0 &&
         pairs.Item1 - distance.Item1 * i <MaxX && pairs.Item2 - distance.Item2 * i <MaxY; i++)
     {
@@ -89,26 +88,6 @@ foreach (var pairs in positionPairs)
 
         }
     }
-    //var newpoint1 = ((pairs.Item1 - distance.Item1), (pairs.Item2 - distance.Item2));
-    //var newpoint2 = ((pairs.Item3 + distance.Item1), (pairs.Item4 + distance.Item2));
-    //if (newpoint1.Item1 >= 0 && newpoint1.Item2 >= 0 && newpoint1.Item1 < MaxX && newpoint1.Item2 < MaxY)
-    //{
-    //    FinalPositions.Add(newpoint1);
-    //    sum++;
-    //}
-    //else
-    //{
-
-    //}
-    //if (newpoint2.Item1 >= 0 && newpoint2.Item2 >= 0 && newpoint2.Item1 < MaxX && newpoint2.Item2 < MaxY)
-    //{
-    //    FinalPositions.Add(newpoint2);
-    //    sum++;
-    //}
-    //else
-    //{
-
-    //}
 }
 
 sum = FinalPositions.Distinct().Count();
