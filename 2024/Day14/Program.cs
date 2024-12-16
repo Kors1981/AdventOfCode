@@ -64,27 +64,6 @@ for (int j = 0; j < 103; j++)
 }
 Console.WriteLine($"14B:{Q1*Q2*Q3*Q4}");
 
-for (int i = 0; i < 10000000; i++)
-{
-
-    int isSymetric = 0;
-    for (int j = 0; j < 101; j++)
-    {
-        for (int g = 0; g < 103; g++)
-        {
-
-
-            robots.Exists(x => x.CurrentPosition.Item1==j && x.CurrentPosition.Item1 == j)
-            } }
-if(isSymetric>50)
-    {
-
-    }
-    foreach (var item in robots)
-    {
-        item.Move(1);
-    }
-}
 public class Robot
 {
     private (sbyte, sbyte) currentPosition;
