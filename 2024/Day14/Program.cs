@@ -10,7 +10,7 @@ var input = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory() + $"..
 var InputRegex = new Regex("p=\\s*(?<Px>\\d+),(?<Py>\\d+)\\s*v\\=(?<Vx>\\-?\\d+),\\s*(?<Vy>\\-?\\d+)");
 var matches = InputRegex.Matches(input);
 List<Robot> robots = new List<Robot>();
- (sbyte, sbyte) mapsize = (101, 103);
+ (sbyte, sbyte) mapsize = (11, 7);
 var secound = 100;
 int Q1 = 0;
 int Q2 = 0;
@@ -21,7 +21,7 @@ foreach (Match item in matches)
     (sbyte,sbyte) startPos=(sbyte.Parse(item.Groups["Px"].Value), sbyte.Parse(item.Groups["Py"].Value));
     (sbyte, sbyte) velocity = (sbyte.Parse(item.Groups["Vx"].Value), sbyte.Parse(item.Groups["Vy"].Value));
     var robot = new Robot(startPos, velocity, mapsize);
-    robot.Move(secound);
+    //robot.Move(secound);
     robots.Add(robot);
     if (robot.CurrentPosition.Item1 != mapsize.Item1 / 2  || robot.CurrentPosition.Item2 != mapsize.Item2 / 2)
     {
@@ -39,32 +39,52 @@ foreach (Match item in matches)
     }
 }
 
-//char[,] list = new char[11, 7];
-//for (int x  = 0; x < mapsize.Item2; x++)
-//{
-//    for (int  y= 0; y < mapsize.Item1; y++)
-//    {
-//        list[y, x] = '0';   
-//    }
-//}
+char[,] list = new char[101, 103];
+for (int x = 0; x < mapsize.Item2; x++)
+{
+    for (int y = 0; y < mapsize.Item1; y++)
+    {
+        list[y, x] = '0';
+    }
+}
 
-//foreach (var robot in robots)
-//{
-//    int temp = int.Parse(list[robot.CurrentPosition.Item1, robot.CurrentPosition.Item2].ToString());
-//    temp++;
-//    list[robot.CurrentPosition.Item1, robot.CurrentPosition.Item2] = temp.ToString()[0];
-//}
-//for (int j = 0; j < 7; j++)
-//{
-//    for (int i = 0; i < 11; i++)
-//    {
-//        Console.Write(list[i, j]);
-//            }
-//    Console.WriteLine();
-//}
+foreach (var robot in robots)
+{
+    int temp = int.Parse(list[robot.CurrentPosition.Item1, robot.CurrentPosition.Item2].ToString());
+    temp++;
+    list[robot.CurrentPosition.Item1, robot.CurrentPosition.Item2] = temp.ToString()[0];
+}
+for (int j = 0; j < 103; j++)
+{
+    for (int i = 0; i < 101; i++)
+    {
+        Console.Write(list[i, j]);
+    }
+    Console.WriteLine();
+}
 Console.WriteLine($"14B:{Q1*Q2*Q3*Q4}");
-Console.ReadLine();
 
+for (int i = 0; i < 10000000; i++)
+{
+
+    int isSymetric = 0;
+    for (int j = 0; j < 101; j++)
+    {
+        for (int g = 0; g < 103; g++)
+        {
+
+
+            robots.Exists(x => x.CurrentPosition.Item1==j && x.CurrentPosition.Item1 == j)
+            } }
+if(isSymetric>50)
+    {
+
+    }
+    foreach (var item in robots)
+    {
+        item.Move(1);
+    }
+}
 public class Robot
 {
     private (sbyte, sbyte) currentPosition;
